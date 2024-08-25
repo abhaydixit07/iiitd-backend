@@ -25,7 +25,7 @@ SOUND_REFERENCE = {
 
 IMAGE ={
      'A' : 'https://png.pngtree.com/png-vector/20231017/ourmid/pngtree-fresh-apple-fruit-red-png-image_10203073.png',
-     "z" : 'https://pngimg.com/uploads/zebra/zebra_PNG95977.png'
+     "Z" : 'https://pngimg.com/uploads/zebra/zebra_PNG95977.png'
 }
 
 PRONUNCIATION = {
