@@ -94,13 +94,14 @@ def check(word_given, word_recieved, check_for):
         k=0
         while k<len(word_recieved) and word_recieved[k]==' ':
              k+=1
+        word_recieved=word_recieved[k:]
         for i in range(k,len(word_recieved)):
-              if word_recieved[i]=='.' or word_recieved[i]=='\n' or word_recieved[i]==' ' or word_recieved[i]=='!':
-                    word_recieved=word_recieved[k:i]
+              if word_recieved[i]=='.' or word_recieved[i]=='\n' or word_recieved[i]==' ' or word_recieved[i]=='' or word_recieved[i]=='!':
+                    word_recieved=word_recieved[0:i]
                     break
         print(word_given,word_recieved,check_for)
-        if word_recieved[k:len(SOUND_REFERENCE[check_for])] == SOUND_REFERENCE[check_for]:
-            print(word_recieved[len(SOUND_REFERENCE[check_for]):],word_given[len(check_for):])
+        if word_recieved[0:len(SOUND_REFERENCE[check_for])] == SOUND_REFERENCE[check_for]:
+            #print(word_recieved[len(SOUND_REFERENCE[check_for]):],word_given[len(check_for):])
             if word_recieved[len(SOUND_REFERENCE[check_for]):]==word_given[len(check_for):]:
 
                  return 20
@@ -109,13 +110,13 @@ def check(word_given, word_recieved, check_for):
                  return 0
 
             #return [0,REMEDY[check_for]]
-        elif word_recieved[k:len(check_for)]==word_given[0:len(check_for)]:
+        elif word_recieved[0:len(check_for)]==word_given[0:len(check_for)]:
             if word_recieved[len(check_for):]==word_given[len(check_for):]:
                  return 100
             else:
                  return 75
         else:
-            print('dasd')
+            # print('dasd')
             return 0
 
 
