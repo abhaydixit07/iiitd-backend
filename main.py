@@ -182,7 +182,7 @@ def record():
     with open("output.wav", "rb") as file:
         transcription = client.audio.transcriptions.create(
         file=(filename, file.read()),
-        model="whisper-large-v3",
+        model="distil-whisper-large-v3-en",
         response_format="verbose_json",
         )
     print(transcription.text)
